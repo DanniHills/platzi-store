@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import {ProductsService} from './../products.service'
-import {Product} from './../product.model'
+import {ProductsService} from '../../../core/service/products/products.service'
+import {Product} from '../../../product.model'
 @Component({
-  selector: 'app-products-detail',
+  selector: 'app-product-detail',
   templateUrl: './products-detail.component.html',
-  styleUrls: ['./products-detail.component.css']
+  styleUrls: ['./products-detail.component.scss']
 })
 export class ProductsDetailComponent implements OnInit {
 product : Product
@@ -15,7 +15,7 @@ product : Product
   ){}
 
   ngOnInit() {
-    this.route.params.subscribe((params: Params)=>{
+    this.route.params.subscribe((params: Params) => {
       const id =params.id;
       this.product = this.productsService.getProduct(id);
     

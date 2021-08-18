@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnChanges, OnInit, SimpleChanges, DoCheck, OnDestroy } from "@angular/core";
-import { Product } from '../product.model'
+import { Product } from '../../../product.model'
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Product } from '../product.model'
     styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit, DoCheck {
-    @Input() product: Product;
+    @Input() producto: Product;
     @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
     constructor() {
@@ -31,7 +31,7 @@ export class ProductComponent implements OnInit, DoCheck {
     }
     addCart() {
         console.log('añadir al carrito')
-        this.productClicked.emit(this.product.id);
+        this.productClicked.emit(this.producto.id);
     }
     today= new Date();
 }
