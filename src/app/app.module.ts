@@ -20,7 +20,6 @@ import { LayoutModule } from '@angular/cdk/layout'
     DemoComponent,
     PageNotFoundComponent,
     LayoutComponent,
-
   ],
   imports: [
     BrowserModule,
