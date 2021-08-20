@@ -11,15 +11,16 @@ import { LayoutComponent } from './layout/layout.component';
 import { SharedModule} from './shared/shared.module'
 import {CoreModule} from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { LayoutModule } from '@angular/cdk/layout'
-
+import { LayoutModule } from '@angular/cdk/layout';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     CartComponent,
     DemoComponent,
     PageNotFoundComponent,
-    LayoutComponent,
+    LayoutComponent
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +29,8 @@ import { LayoutModule } from '@angular/cdk/layout'
     SharedModule,
     CoreModule,
     BrowserAnimationsModule,
-    LayoutModule
+    LayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
