@@ -5,10 +5,12 @@
     <div>
       <ul>
         <li>Nombre: {{ product.title }}</li>
-        <li>Precio: {{ product.price | currency }}</li>
+        <li>Precio: {{ product.price }}</li>
       </ul>
       <p>{{ product.description }}</p>
     </div>
    <button  mat-raised-button color ="primary" (click)= "createProduct()">Agregar producto</button>
-   
+   <button  mat-raised-button color ="primary" (click)= "updateProduct()">update producto</button>
+   <button  mat-raised-button color ="primary" (click)= "deleteProduct()">delete producto</button>
+ 
   </div>
