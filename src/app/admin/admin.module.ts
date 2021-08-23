@@ -15,6 +15,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { TreeComponent } from './components/tree/tree.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { OrderListComponent } from './components/order-list/order-list.component';
+import { FormProductComponent } from './components/form-product/form-product.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { OrderListComponent } from './components/order-list/order-list.component
     DashboardComponent,
     TreeComponent,
     ProductsListComponent,
-    OrderListComponent],
+    OrderListComponent,
+    FormProductComponent],
   imports: [
     CommonModule, 
     AdminRoutingModule,
