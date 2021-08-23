@@ -5,6 +5,8 @@ import { NavComponent } from  './components/nav/nav.component';
 import { TableComponent } from './components/table/table.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TreeComponent } from './components/tree/tree.component'
+import { ProductsListComponent } from './components/products-list/products-list.component'
+import { OrderListComponent } from './components/order-list/order-list.component'
 const routes: Routes = [
 
   {
@@ -20,12 +22,20 @@ const routes: Routes = [
         component: DashboardComponent
       },
       {
-        path:'Table',
+        path:'table',
         component: TableComponent
       },
       {
-        path: 'Tree',
-        component:TreeComponent   
+        path:'products',
+        component: ProductsListComponent
+      },
+      {
+        path: 'tree',
+        component: TreeComponent   
+      },
+      {
+        path: 'order',
+        component: OrderListComponent
       }
 
     ]

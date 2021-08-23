@@ -16,11 +16,28 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTreeModule } from '@angular/material/tree';
-
+import {LayoutModule} from '@angular/cdk/layout'
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatBadgeModule,
+    MatCardModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatSidenavModule,
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatMenuModule,
+    MatSortModule,
+    MatGridListModule,
+    MatTreeModule,
+    LayoutModule
   ],
   exports:[
     MatButtonModule,
@@ -38,7 +55,8 @@ import { MatTreeModule } from '@angular/material/tree';
     MatMenuModule,
     MatSortModule,
     MatGridListModule,
-    MatTreeModule
+    MatTreeModule,
+    LayoutModule
   ]
 })
 export class MaterialModule { }

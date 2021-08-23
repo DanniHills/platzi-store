@@ -6,13 +6,15 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { NavComponent } from './components/nav/nav.component';
-import {MaterialModule} from './../material/material.module';
+import { MaterialModule} from './../material/material.module';
 import { TableComponent } from './components/table/table.component';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 import { LayoutModule } from '@angular/cdk/layout';
 import { TreeComponent } from './components/tree/tree.component';
+import { ProductsListComponent } from './components/products-list/products-list.component';
+import { OrderListComponent } from './components/order-list/order-list.component';
 
 
 @NgModule({
@@ -21,9 +23,11 @@ import { TreeComponent } from './components/tree/tree.component';
     NavComponent, 
     TableComponent, 
     DashboardComponent,
-    TreeComponent],
+    TreeComponent,
+    ProductsListComponent,
+    OrderListComponent],
   imports: [
-    CommonModule,
+    CommonModule, 
     AdminRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
