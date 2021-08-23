@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DemoComponent } from './component/demo/demo.component';
 import {FormsModule} from '@angular/forms'
 import { DemoRoutingModule } from './demo-routing.module';
-import { SharedModule } from './../shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
