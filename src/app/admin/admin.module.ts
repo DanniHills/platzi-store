@@ -6,7 +6,7 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { NavComponent } from './components/nav/nav.component';
-import { MaterialModule} from './../material/material.module';
+import { MaterialModule} from '@material/material.module';
 import { TableComponent } from './components/table/table.component';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';

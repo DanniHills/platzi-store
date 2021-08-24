@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
-import {AuthService} from './../../../core/service/auth.service'
+import {AuthService} from '@core/service/auth.service'
 @Component({
   selector: 'app-form-registro',
   templateUrl: './form-registro.component.html',

@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { CartComponent } from './cart/cart.component';
 import { AppRoutingModule} from './app-routing.module';
 import { LayoutComponent } from './layout/layout.component';
-import { SharedModule} from './shared/shared.module'
-import { CoreModule} from './core/core.module';
+import { SharedModule} from '@shared/shared.module'
+import { CoreModule} from '@core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { LayoutModule } from '@angular/cdk/layout';
 import { HttpClientModule } from '@angular/common/http';
