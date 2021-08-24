@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router'
+import { AuthService} from './../../../core/service/auth.service'
 @Component({
   selector: 'app-form-login',
   templateUrl: './form-login.component.html',
@@ -11,22 +12,32 @@ export class FormLoginComponent implements OnInit {
   form: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router
-  ) { }
-  ngOnInit(): void {
+    private router: Router,    
+    private authService: AuthService
+  ) {
     this.buildForm();
+   }
+  ngOnInit(): void {
+   
   }
   login(event: Event) {
     event.preventDefault();
-    if (this.form.value) {
-      
-      this.router.navigate(['./home']);
-    }}
+    if (this.form.valid) {
+      const value = this.form.value;
+      this.authService.login(value.email, value.password)
+      .then(() => {
+        this.router.navigate(['/admin']);
+      })
+      .catch(() => {
+        alert('no es valido');
+      });
+    }
+  }
 
     private buildForm() {
       this.form = this.formBuilder.group({
-        correo: ['', [Validators.required]],
-        contraseña: ['', [Validators.required]]
+        email: ['', [Validators.required]],
+        password: ['', [Validators.required]]
       });
     }  
   }

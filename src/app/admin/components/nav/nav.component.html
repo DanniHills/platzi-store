@@ -9,8 +9,8 @@
       <a mat-list-item routerLink="/admin/dashboard"> Home</a>
       <a mat-list-item routerLink="/admin/table">Inventario</a>
       <a mat-list-item routerLink="/admin/products">Products</a>
-      <a mat-list-item routerLink="/admin/order">Order</a>
-      <a mat-list-item routerLink="/admin/tree">Tree</a>
+      <button mat-list-item (click)="logout()" >Cerrar sesión</button>
+      
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

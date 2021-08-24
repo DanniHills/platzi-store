@@ -4,7 +4,7 @@ import { FormLoginComponent} from './components/form-login/form-login.component'
 import { FormRegistroComponent} from './components/form-registro/form-registro.component'
 const routes: Routes = [
   {
-    path:'',
+    path:'login',
     component:FormLoginComponent ,
   },
       {

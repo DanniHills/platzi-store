@@ -11,7 +11,10 @@ import { CoreModule} from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { LayoutModule } from '@angular/cdk/layout';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AngularFireModule} from '@angular/fire';
+import {  AngularFireAuthModule} from '@angular/fire/auth';
+import {environment} from './../environments/environment'
+import { AngularFireStorageModule} from '@angular/fire/storage';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,10 @@ import { HttpClientModule } from '@angular/common/http';
     CoreModule,
     BrowserAnimationsModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent],
