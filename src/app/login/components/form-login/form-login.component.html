@@ -1,0 +1,32 @@
+
+<form [formGroup]= "form" (ngSubmit)="login($event)">
+    <div class="container">
+   <mat-card-header>
+       <mat-card-title>login</mat-card-title>
+   </mat-card-header>
+    <mat-card>
+        <mat-card-header>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="row" >
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="Correo" formControlName="email" matInput type="text">
+                    </mat-form-field>
+                </div>        
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder= "Contraseña" formControlName="password" matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button  type="submit">Iniciar Sesión</button>
+            <a routerLink="/auth/register" type="submit">  Crear usuario</a>
+        </mat-card-actions>
+    </mat-card>
+</div>
+</form>

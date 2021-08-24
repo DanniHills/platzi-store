@@ -1,0 +1,29 @@
+<form [formGroup]= "formulario" (ngSubmit)= "registro($event)">
+    <div class="container">
+        <mat-card-header>
+            <mat-card-title>Crear Usuario</mat-card-title>
+        </mat-card-header>
+        <mat-card>
+            <mat-card-content>
+             
+                <div class="row">
+                    <div class="col-xs">
+                        <mat-form-field>
+                            <input placeholder="Correo" formControlName="email" matInput type="text">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs">
+                        <mat-form-field>
+                            <input placeholder="Contraseña" formControlName="password" matInput type="text">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button type="submit">Crear usuario</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</form>

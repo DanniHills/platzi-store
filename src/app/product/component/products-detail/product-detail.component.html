@@ -1,0 +1,16 @@
+<div *ngIf= "product">
+    <div>
+      <img [src]= "product.image" alt="">
+    </div>
+    <div>
+      <ul>
+        <li>Nombre: {{ product.title }}</li>
+        <li>Precio: {{ product.price|currency }}</li>
+      </ul>
+      <p>{{ product.description|slice:0:20 }}</p>
+    </div>
+   <button  mat-raised-button color ="primary" (click)= "createProduct()">Agregar producto</button>
+   <button  mat-raised-button color ="primary" (click)= "updateProduct()">update producto</button>
+   <button  mat-raised-button color ="primary" (click)= "deleteProduct()">delete producto</button>
+ 
+  </div>
