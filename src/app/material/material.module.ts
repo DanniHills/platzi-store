@@ -18,6 +18,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTreeModule } from '@angular/material/tree';
 import {LayoutModule} from '@angular/cdk/layout'
 import { MatFormFieldModule} from '@angular/material/form-field'
+
+import { MatStepperModule} from '@angular/material/stepper'
 @NgModule({
   declarations: [],
   imports: [
@@ -39,7 +41,8 @@ import { MatFormFieldModule} from '@angular/material/form-field'
     MatGridListModule,
     MatTreeModule,
     LayoutModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatStepperModule
   ],
   exports:[
     MatButtonModule,
@@ -59,7 +62,8 @@ import { MatFormFieldModule} from '@angular/material/form-field'
     MatGridListModule,
     MatTreeModule,
     LayoutModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule { }

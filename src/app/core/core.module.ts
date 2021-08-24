@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ProductsService} from './service/products/products.service'
+import {ProductsService} from './service/products/products.service';
+import { CartService } from './service/cart/cart.service'
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule
   ],
   providers:[
-    ProductsService
+    ProductsService,
+    CartService
   ]
 })
 export class CoreModule { }
