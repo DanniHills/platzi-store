@@ -5,6 +5,7 @@ import { ProductsService } from '@core/service/products/products.service';
 import { Product } from '../../../product.model';
 import {switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import * as FileSaver from 'file-saver';
 
 @Component({
   selector: 'app-product-detail',
@@ -77,5 +78,13 @@ getRandomUsers(){
       console.error('error',error);
     }
   )
+}
+getFile() {
+  this.productsService.getFile()
+  .subscribe(content => {
+    console.log(content);
+    const blob = new Blob([content], {type: 'text/plain;charset=utf-8'});
+    FileSaver.saveAs(blob, 'hola.txt');
+  });  
 }
 }

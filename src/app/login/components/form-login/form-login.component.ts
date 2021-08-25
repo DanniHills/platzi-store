@@ -33,7 +33,12 @@ export class FormLoginComponent implements OnInit {
       });
     }
   }
-
+  loginapi(){
+    this.authService.loginRestApi('danixa@gmail.com','danixa')
+    .subscribe(data=>{
+      console.log(data)
+    })
+  }
     private buildForm() {
       this.form = this.formBuilder.group({
         email: ['', [Validators.required]],
