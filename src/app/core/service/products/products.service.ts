@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Product} from '../../../product.model';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { environment } from './../../../../environments/environment'
-import { Observable } from 'rxjs';
-import {map} from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import {map, catchError} from 'rxjs/operators';
 
 interface User{
   email: string;
@@ -40,7 +40,13 @@ export class ProductsService {
   getRandomUsers(): Observable<User[]> {
      return this.http.get('https://randomuser.me/api/?results=2')
     .pipe(
+      catchError(this.handleError),
       map((response: any) => response.results as User[])
     );
+  }
+  private handleError(error: HttpErrorResponse ){
+    console.log(error);
+    return throwError('ups algo salio mal .. error!');
+    
   }
 }
