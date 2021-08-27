@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import { Routes,RouterModule, PreloadAllModules } from '@angular/router';
 import {LayoutComponent} from './layout/layout.component';
 import {AdminGuard} from './admin.guard'
+import {PreloadService} from './core/service/preload.service'
 const routes:Routes =[
     {
         path:'',
@@ -14,7 +15,8 @@ const routes:Routes =[
             },
             {
                 path:'home',
-               loadChildren: () => import('./home/home.module').then(m=> m.HomeModule)
+               loadChildren: () => import('./home/home.module').then(m=> m.HomeModule),
+                data: {Preload:true}
             },
             {
                 path: 'products',
@@ -22,7 +24,8 @@ const routes:Routes =[
               },
             {
                 path:'contact',
-                loadChildren: () => import('./contact/contact.module').then(m=> m.ContactModule)
+                loadChildren: () => import('./contact/contact.module').then(m=> m.ContactModule),
+                data: {Preload:true}
             },
             {
                 path:'order',
@@ -54,7 +57,7 @@ const routes:Routes =[
 ];
 @NgModule({
     imports:[RouterModule.forRoot(routes,{
-        preloadingStrategy: PreloadAllModules
+        preloadingStrategy: PreloadService
     })],
     exports:[RouterModule]
 })
