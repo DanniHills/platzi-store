@@ -12,10 +12,5 @@ export class PreloadService implements PreloadingStrategy {
     } else{
       return of()
     }
-<<<<<<< HEAD
-=======
-    
-
->>>>>>> fc5d4d85693bd0d8ce1132201f8a4dae7b45ce72
    }
 }
