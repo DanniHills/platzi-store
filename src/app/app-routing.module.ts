@@ -2,7 +2,9 @@ import {NgModule} from '@angular/core';
 import { Routes,RouterModule, PreloadAllModules } from '@angular/router';
 import {LayoutComponent} from './layout/layout.component';
 import {AdminGuard} from './admin.guard'
-import {PreloadService} from './core/service/preload.service'
+import {PreloadService} from './core/service/preload.service';
+import {QuicklinkStrategy} from 'ngx-quicklink';
+
 const routes:Routes =[
     {
         path:'',
@@ -57,7 +59,9 @@ const routes:Routes =[
 ];
 @NgModule({
     imports:[RouterModule.forRoot(routes,{
-        preloadingStrategy: PreloadService
+        preloadingStrategy: QuicklinkStrategy,
+        enableTracing: false,
+        paramsInheritanceStrategy:'always'
     })],
     exports:[RouterModule]
 })
